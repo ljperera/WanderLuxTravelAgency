@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Schedule a personalized consultation with a Senior Travel Consultant at WanderLux Travel Agency to start planning your bespoke journey." />
+  <title>Book Appointment | WanderLux Travel Agency</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-hero {
+      position: relative;
+      height: 45vh;
+      min-height: 350px;
+      background: linear-gradient(135deg, rgba(10, 25, 47, 0.85) 0%, rgba(10, 25, 47, 0.4) 100%), 
+                  url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--white);
+    }
+    .page-hero h1 {
+      color: var(--white);
+      font-size: 2.8rem;
+      margin-bottom: 0.75rem;
+    }
+    .page-hero p {
+      font-size: 1.15rem;
+      max-width: 600px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+    .step-card {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      text-align: center;
+      position: relative;
+    }
+    .step-number {
+      display: inline-block;
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+      background: var(--primary);
+      color: var(--white);
+      font-weight: 700;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+    .step-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .step-card p {
+      font-size: 0.95rem;
+      color: #64748B;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <nav class="nav container" aria-label="Main Navigation">
+      <a href="index.html" class="logo">Wander<span>Lux</span></a>
+      
+      <button class="nav-toggle" aria-label="Toggle navigation menu" id="navToggle">
+        <span class="hamburger"></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="calculator.html" class="nav-link">Trip Calculator</a></li>
+        <li><a href="appointment.html" class="nav-link active">Appointments</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero" aria-label="Appointment Header">
+      <div class="container reveal">
+        <span class="badge">1-On-1 Consultation</span>
+        <h1>Schedule a Private Consultation</h1>
+        <p>Connect with a dedicated Senior Travel Specialist to review your calculator estimate and customize your itinerary.</p>
+      </div>
+    </section>
+
+    <section class="section container">
+      
+      <div class="steps-grid reveal">
+        <div class="step-card">
+          <span class="step-number">1</span>
+          <h3>Submit Request</h3>
+          <p>Fill out your basic contact details and preferred travel dates below.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-number">2</span>
+          <h3>Consultant Matching</h3>
+          <p>We pair you with a specialist who holds insider expertise in your destination.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-number">3</span>
+          <h3>Bespoke Design</h3>
+          <p>Collaborate via phone or video link to finalize a fully custom itinerary.</p>
+        </div>
+      </div>
+
+      <div class="section-header reveal">
+        <h2>Request Your Consultation</h2>
+        <p>Please complete all required fields below. Appointments are typically confirmed via phone or email within 4 business hours.</p>
+      </div>
+
+      <div class="reveal" style="max-width: 800px; margin: 0 auto;">
+        <form id="appointmentForm" class="form-box" aria-label="Appointment Request Form">
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="appName">Full Name *</label>
+              <input type="text" id="appName" required placeholder="e.g. Jane Doe" autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="appEmail">Email Address *</label>
+              <input type="email" id="appEmail" required placeholder="e.g. jane@example.com" autocomplete="email" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="appPhone">Phone Number *</label>
+              <input type="tel" id="appPhone" required placeholder="e.g. +61 400 000 000" autocomplete="tel" />
+            </div>
+            <div class="form-group">
+              <label for="appDate">Preferred Consultation Date *</label>
+              <input type="date" id="appDate" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="appMessage">Travel Notes & Dream Destinations</label>
+            <textarea id="appMessage" rows="5" placeholder="Share any details about your trip: destination ideas, number of travelers, special celebrations (honeymoon, anniversary), or accessibility requirements..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Confirm Appointment Request</button>
+          
+          <div id="appFeedback" class="form-feedback" role="alert"></div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section bg-light">
+      <div class="container reveal" style="max-width: 800px;">
+        <div class="section-header">
+          <h2>Consultation FAQ</h2>
+          <p>Common questions about booking and working with our luxury travel planning team.</p>
+        </div>
+
+        <div style="background: var(--white); padding: 2rem; border-radius: 8px; border: 1px solid var(--border); margin-bottom: 1.5rem;">
+          <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem; color: var(--primary);">Is there a fee for the initial appointment?</h3>
+          <p style="color: #64748B; font-size: 0.95rem;">No. Your initial 45-minute discovery consultation is completely complimentary. We discuss your vision, present preliminary ideas, and review estimated budgets with zero obligation.</p>
+        </div>
+
+        <div style="background: var(--white); padding: 2rem; border-radius: 8px; border: 1px solid var(--border);">
+          <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem; color: var(--primary);">How are consultations conducted?</h3>
+          <p style="color: #64748B; font-size: 0.95rem;">We offer flexible meeting formats: secure high-definition video calls (Zoom/Teams), phone consultations, or in-person appointments at our Melbourne CBD headquarters.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo footer-logo">Wander<span>Lux</span></a>
+        <p>Your premier partner for bespoke domestic and international travel experiences.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="services.html">Services & Packages</a></li>
+          <li><a href="calculator.html">Trip Cost Calculator</a></li>
+          <li><a href="appointment.html">Book Appointment</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Agency Information</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Information</a></li>
+          <li><span>Level 14, 100 Collins St, Melbourne</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>&copy; 2026 WanderLux Travel Agency. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

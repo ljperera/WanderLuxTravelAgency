@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore WanderLux Travel Agency's signature services including bespoke holiday packages, private guided tours, flight management, and honeymoon specials." />
+  <title>Services & Destinations | WanderLux Travel Agency</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-hero {
+      position: relative;
+      height: 45vh;
+      min-height: 350px;
+      background: linear-gradient(135deg, rgba(10, 25, 47, 0.85) 0%, rgba(10, 25, 47, 0.4) 100%), 
+                  url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--white);
+    }
+    .page-hero h1 {
+      color: var(--white);
+      font-size: 2.8rem;
+      margin-bottom: 0.75rem;
+    }
+    .page-hero p {
+      font-size: 1.15rem;
+      max-width: 600px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+    .service-detail-list {
+      list-style: none;
+      margin-top: 1rem;
+      border-top: 1px solid var(--border);
+      padding-top: 1rem;
+    }
+    .service-detail-list li {
+      font-size: 0.9rem;
+      color: #64748B;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .service-detail-list li::before {
+      content: '✦';
+      color: var(--accent);
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <nav class="nav container" aria-label="Main Navigation">
+      <a href="index.html" class="logo">Wander<span>Lux</span></a>
+      
+      <button class="nav-toggle" aria-label="Toggle navigation menu" id="navToggle">
+        <span class="hamburger"></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="services.html" class="nav-link active">Services</a></li>
+        <li><a href="calculator.html" class="nav-link">Trip Calculator</a></li>
+        <li><a href="appointment.html" class="nav-link">Appointments</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero" aria-label="Services Header">
+      <div class="container reveal">
+        <span class="badge">What We Offer</span>
+        <h1>Signature Services & Destinations</h1>
+        <p>Comprehensive travel management crafted with precision, insider access, and uncompromising standards.</p>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-header reveal">
+        <h2>Our Tailored Travel Services</h2>
+        <p>From seamless transit logistics to once-in-a-lifetime private excursions, we handle every dimension of your journey.</p>
+      </div>
+
+      <div class="grid-4 reveal">
+        <!-- Service 1 -->
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="Luxury resort swimming pool overlooking the ocean" />
+          <div class="card-body">
+            <h3>Holiday Packages</h3>
+            <p>End-to-end multi-week vacation itineraries tailored to relaxation, family bonding, or wellness retreats.</p>
+            <ul class="service-detail-list">
+              <li>All-inclusive resort partnerships</li>
+              <li>VIP airport fast-track transfers</li>
+              <li>Hand-selected local dining guides</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=600&q=80" alt="Traveler exploring historic streets in London with a guide" />
+          <div class="card-body">
+            <h3>Guided Cultural Tours</h3>
+            <p>Gain authentic historical and cultural insights led by private art historians, archeologists, and chefs.</p>
+            <ul class="service-detail-list">
+              <li>Skip-the-line landmark access</li>
+              <li>Private chauffeur & transport</li>
+              <li>Small group or solo options</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="First class hotel lobby interior with modern luxury decor" />
+          <div class="card-body">
+            <h3>Flights & Boutique Hotels</h3>
+            <p>Unlock preferred partner rates, complimentary room upgrades, and flexible first-class ticketing arrangements.</p>
+            <ul class="service-detail-list">
+              <li>Guaranteed early check-in perks</li>
+              <li>Exclusive airline upgrades</li>
+              <li>24/7 flight monitoring & support</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=600&q=80" alt="Couple dining by sunset on a private beach" />
+          <div class="card-body">
+            <h3>Honeymoon Specials</h3>
+            <p>Celebrate romantic milestones with secluded island escapes, private yacht charters, and bespoke touches.</p>
+            <ul class="service-detail-list">
+              <li>Complimentary champagne dining</li>
+              <li>Overwater bungalow privacy</li>
+              <li>Tailored couples wellness suites</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section bg-light">
+      <div class="container reveal">
+        <div class="section-header">
+          <h2>Explore Featured Regions</h2>
+          <p>We maintain dedicated on-the-ground concierge teams across the globe's most sought-after travel corridors.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="package-card">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=600&q=80" alt="Traditional architecture in Tokyo, Japan" />
+            </div>
+            <div class="card-body">
+              <h3>Asia & The Pacific</h3>
+              <p>Experience the harmony of ancient tradition and futuristic innovation across Japan, Thailand, Vietnam, and French Polynesia.</p>
+              <div class="card-footer">
+                <span class="price">12+ Destinations</span>
+                <a href="calculator.html" class="link-arrow">Estimate Cost &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="package-card">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=600&q=80" alt="Scenic medieval castle in the Bavarian Alps" />
+            </div>
+            <div class="card-body">
+              <h3>Classic Europe</h3>
+              <p>Indulge in private vineyard tastings in Tuscany, luxury alpine chalets in Switzerland, and yacht cruises along the French Riviera.</p>
+              <div class="card-footer">
+                <span class="price">18+ Destinations</span>
+                <a href="calculator.html" class="link-arrow">Estimate Cost &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="package-card">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=600&q=80" alt="Turquoise waters and limestone cliffs in the Mediterranean" />
+            </div>
+            <div class="card-body">
+              <h3>The Mediterranean</h3>
+              <p>Discover the vibrant history and coastal elegance of the Greek Isles, the Amalfi Coast, Malta, and the Balearic Islands.</p>
+              <div class="card-footer">
+                <span class="price">10+ Destinations</span>
+                <a href="calculator.html" class="link-arrow">Estimate Cost &rarr;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner container reveal">
+      <div class="cta-content">
+        <h2>Have a Specific Itinerary in Mind?</h2>
+        <p>Our travel specialists thrive on custom requests. Let us build your custom package from the ground up.</p>
+        <div class="hero-actions">
+          <a href="calculator.html" class="btn btn-primary">Calculate Estimated Budget</a>
+          <a href="appointment.html" class="btn btn-outline">Book a Consultation</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo footer-logo">Wander<span>Lux</span></a>
+        <p>Your premier partner for bespoke domestic and international travel experiences.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="services.html">Services & Packages</a></li>
+          <li><a href="calculator.html">Trip Cost Calculator</a></li>
+          <li><a href="appointment.html">Book Appointment</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Agency Information</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Information</a></li>
+          <li><span>Level 14, 100 Collins St, Melbourne</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>&copy; 2026 WanderLux Travel Agency. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

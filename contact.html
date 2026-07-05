@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Get in touch with WanderLux Travel Agency. Visit our Melbourne CBD office, give us a call, or send an inquiry directly through our interactive contact form." />
+  <title>Contact Us | WanderLux Travel Agency</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-hero {
+      position: relative;
+      height: 45vh;
+      min-height: 350px;
+      background: linear-gradient(135deg, rgba(10, 25, 47, 0.85) 0%, rgba(10, 25, 47, 0.4) 100%), 
+                  url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--white);
+    }
+    .page-hero h1 {
+      color: var(--white);
+      font-size: 2.8rem;
+      margin-bottom: 0.75rem;
+    }
+    .page-hero p {
+      font-size: 1.15rem;
+      max-width: 600px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      align-items: start;
+    }
+    .contact-details-box {
+      background: var(--white);
+      padding: 2.5rem;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+    .contact-details-box h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+    }
+    .info-item {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      align-items: flex-start;
+    }
+    .info-icon {
+      font-size: 1.25rem;
+      color: var(--accent);
+      min-width: 24px;
+    }
+    .info-text strong {
+      display: block;
+      color: var(--text-dark);
+      margin-bottom: 0.2rem;
+    }
+    .info-text p, .info-text a {
+      color: #64748B;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .info-text a:hover {
+      color: var(--accent);
+    }
+
+    .map-container {
+      margin-top: 2rem;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      height: 260px;
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    @media (max-width: 900px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <nav class="nav container" aria-label="Main Navigation">
+      <a href="index.html" class="logo">Wander<span>Lux</span></a>
+      
+      <button class="nav-toggle" aria-label="Toggle navigation menu" id="navToggle">
+        <span class="hamburger"></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="calculator.html" class="nav-link">Trip Calculator</a></li>
+        <li><a href="appointment.html" class="nav-link">Appointments</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero" aria-label="Contact Header">
+      <div class="container reveal">
+        <span class="badge">Direct Communication</span>
+        <h1>Connect With WanderLux</h1>
+        <p>Reach out to our Melbourne headquarters or send a direct inquiry to begin planning your next escape.</p>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="contact-grid reveal">
+        
+        <div class="contact-details-box">
+          <h3>Agency Headquarters</h3>
+          
+          <div class="info-item">
+            <span class="info-icon">📍</span>
+            <div class="info-text">
+              <strong>Office Address</strong>
+              <p>Level 14, 100 Collins Street<br />Melbourne VIC 3000, Australia</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-icon">📞</span>
+            <div class="info-text">
+              <strong>Direct Phone</strong>
+              <p><a href="tel:+61390001234">+61 (0)3 9000 1234</a></p>
+              <p style="font-size: 0.85rem; color: #94A3B8;">Mon – Fri: 9:00 AM – 6:00 PM AEST</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-icon">✉️</span>
+            <div class="info-text">
+              <strong>Concierge Email</strong>
+              <p><a href="mailto:concierge@wanderluxtravel.com.au">concierge@wanderluxtravel.com.au</a></p>
+            </div>
+          </div>
+
+          <div class="map-container" aria-label="Location Map of WanderLux Headquarters">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.83543450937!2d144.96811331584484!3d-37.81720997975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b8c21cb29b%3A0x1c045678462e3510!2s100%20Collins%20St%2C%20Melbourne%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2sau!4v1680000000000!5m2!1sen!2sau" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Google Map showing WanderLux Office at 100 Collins Street, Melbourne">
+            </iframe>
+          </div>
+        </div>
+
+        <form id="directContactForm" class="form-box" aria-label="Direct Email Contact Form">
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--primary);">Send a Direct Email</h3>
+          <p style="font-size: 0.9rem; color: #64748B; margin-bottom: 1.5rem;">
+            Submitting this form utilizes JavaScript to launch your native email client (Outlook, Mail, or Gmail) with your message pre-formatted and ready to send.
+          </p>
+          
+          <div class="form-group">
+            <label for="contactName">Your Name *</label>
+            <input type="text" id="contactName" required placeholder="Alex Smith" autocomplete="name" />
+          </div>
+
+          <div class="form-group">
+            <label for="contactSubject">Subject *</label>
+            <input type="text" id="contactSubject" required placeholder="e.g. Inquiry regarding Amalfi Coast packages" />
+          </div>
+
+          <div class="form-group">
+            <label for="contactBody">Message *</label>
+            <textarea id="contactBody" rows="6" required placeholder="Write your general inquiry, request, or feedback here..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Launch Email Client & Send</button>
+        </form>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo footer-logo">Wander<span>Lux</span></a>
+        <p>Your premier partner for bespoke domestic and international travel experiences.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="services.html">Services & Packages</a></li>
+          <li><a href="calculator.html">Trip Cost Calculator</a></li>
+          <li><a href="appointment.html">Book Appointment</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Agency Information</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Information</a></li>
+          <li><span>Level 14, 100 Collins St, Melbourne</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>&copy; 2026 WanderLux Travel Agency. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

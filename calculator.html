@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Estimate your bespoke luxury travel costs instantly with WanderLux Travel Agency's interactive trip calculator." />
+  <title>Trip Cost Calculator | WanderLux Travel Agency</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-hero {
+      position: relative;
+      height: 45vh;
+      min-height: 350px;
+      background: linear-gradient(135deg, rgba(10, 25, 47, 0.85) 0%, rgba(10, 25, 47, 0.4) 100%), 
+                  url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--white);
+    }
+    .page-hero h1 {
+      color: var(--white);
+      font-size: 2.8rem;
+      margin-bottom: 0.75rem;
+    }
+    .page-hero p {
+      font-size: 1.15rem;
+      max-width: 600px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+    
+    .tier-table-wrapper {
+      overflow-x: auto;
+      margin-top: 2rem;
+    }
+    .tier-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--white);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+    }
+    .tier-table th, .tier-table td {
+      padding: 1rem 1.25rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    .tier-table th {
+      background-color: var(--primary);
+      color: var(--white);
+      font-weight: 600;
+    }
+    .tier-table tr:last-child td {
+      border-bottom: none;
+    }
+    .tier-table tr:nth-child(even) {
+      background-color: var(--bg-light);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <nav class="nav container" aria-label="Main Navigation">
+      <a href="index.html" class="logo">Wander<span>Lux</span></a>
+      
+      <button class="nav-toggle" aria-label="Toggle navigation menu" id="navToggle">
+        <span class="hamburger"></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="calculator.html" class="nav-link active">Trip Calculator</a></li>
+        <li><a href="appointment.html" class="nav-link">Appointments</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero" aria-label="Calculator Header">
+      <div class="container reveal">
+        <span class="badge">Transparent Investment</span>
+        <h1>Interactive Trip Cost Calculator</h1>
+        <p>Adjust your destination, party size, duration, and accommodation style to generate a real-time budget estimate.</p>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-header reveal">
+        <h2>Plan Your Bespoke Budget</h2>
+        <p>Select your preferences below. Our algorithm calculates estimated rates inclusive of daily living costs, accommodations, and curated tours.</p>
+      </div>
+
+      <div class="calculator-card reveal">
+        <form id="calcForm" class="calc-grid" aria-label="Trip Cost Calculator">
+          
+          <div class="form-group">
+            <label for="calcDestination">Select Destination</label>
+            <select id="calcDestination" required>
+              <!-- data-daily = Daily cost per traveler | data-hotel = Daily accommodation cost -->
+              <option value="Bali" data-daily="75" data-hotel="120">Bali, Indonesia</option>
+              <option value="Kyoto" data-daily="110" data-hotel="180">Kyoto, Japan</option>
+              <option value="Santorini" data-daily="130" data-hotel="220">Santorini, Greece</option>
+              <option value="Swiss Alps" data-daily="150" data-hotel="280">Swiss Alps</option>
+              <option value="Amalfi Coast" data-daily="140" data-hotel="250">Amalfi Coast, Italy</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="calcTravelers">Number of Travellers</label>
+            <input type="number" id="calcTravelers" min="1" max="20" value="2" required />
+          </div>
+
+          <div class="form-group">
+            <label for="calcDays">Duration (Days)</label>
+            <input type="number" id="calcDays" min="1" max="60" value="5" required />
+          </div>
+
+          <div class="form-group">
+            <label for="calcStyle">Preferred Travel Style</label>
+            <select id="calcStyle" required>
+              <option value="Budget" data-multiplier="0.85">Budget (Boutique comfort & shared tours)</option>
+              <option value="Standard" data-multiplier="1.2" selected>Standard (4-5 Star luxury & private guides)</option>
+              <option value="Luxury" data-multiplier="2.0">Ultra-Luxury (5-Star villas & yacht/helo charters)</option>
+            </select>
+          </div>
+
+          <div class="form-group calc-btn-wrapper">
+            <button type="submit" class="btn btn-primary btn-block">Calculate Estimate</button>
+          </div>
+        </form>
+
+        <div id="calcOutput" class="calc-output" role="region" aria-live="polite">
+          <p class="output-placeholder">Enter your parameters above and click calculate to view your customized investment summary.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-light">
+      <div class="container reveal">
+        <div class="section-header">
+          <h2>Understanding Our Travel Styles</h2>
+          <p>Every tier is crafted to maintain WanderLux's high standard of comfort, safety, and local authenticity.</p>
+        </div>
+
+        <div class="tier-table-wrapper">
+          <table class="tier-table" aria-label="Comparison of Travel Styles">
+            <thead>
+              <tr>
+                <th>Feature Category</th>
+                <th>Budget Package</th>
+                <th>Standard Package</th>
+                <th>Ultra-Luxury Package</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Accommodations</strong></td>
+                <td>Curated 3 to 4-Star boutique hotels & premium guesthouses</td>
+                <td>Top-tier 4 and 5-Star luxury resort suites</td>
+                <td>Private luxury villas, overwater bungalows, or penthouse suites</td>
+              </tr>
+              <tr>
+                <td><strong>Transfers & Transit</strong></td>
+                <td>Shared luxury airport shuttles & first-class rail transit</td>
+                <td>Private executive vehicle transfers (Sedan/SUV)</td>
+                <td>Chauffeur-driven limousines, helicopter transfers, or private yachts</td>
+              </tr>
+              <tr>
+                <td><strong>Tours & Excursions</strong></td>
+                <td>Small-group guided tours (max 8 guests)</td>
+                <td>Private local guides with customizable start times</td>
+                <td>Exclusive after-hours access, private curators, and chartered flights</td>
+              </tr>
+              <tr>
+                <td><strong>Concierge Access</strong></td>
+                <td>Standard business hours concierge assistance</td>
+                <td>24/7 dedicated on-call phone & chat support</td>
+                <td>Personal on-the-ground butler & dedicated senior travel director</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="center-btn">
+          <a href="appointment.html" class="btn btn-secondary">Lock In This Estimate With a Consultant</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo footer-logo">Wander<span>Lux</span></a>
+        <p>Your premier partner for bespoke domestic and international travel experiences.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="services.html">Services & Packages</a></li>
+          <li><a href="calculator.html">Trip Cost Calculator</a></li>
+          <li><a href="appointment.html">Book Appointment</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Agency Information</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Information</a></li>
+          <li><span>Level 14, 100 Collins St, Melbourne</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>&copy; 2026 WanderLux Travel Agency. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

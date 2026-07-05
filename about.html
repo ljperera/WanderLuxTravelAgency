@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn about WanderLux Travel Agency's heritage, our dedicated travel consultants, our mission, and our uncompromising customer service values." />
+  <title>About Us | WanderLux Travel Agency</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+   
+    .page-hero {
+      position: relative;
+      height: 45vh;
+      min-height: 350px;
+      background: linear-gradient(135deg, rgba(10, 25, 47, 0.85) 0%, rgba(10, 25, 47, 0.4) 100%), 
+                  url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--white);
+    }
+    .page-hero h1 {
+      color: var(--white);
+      font-size: 2.8rem;
+      margin-bottom: 0.75rem;
+    }
+    .page-hero p {
+      font-size: 1.15rem;
+      max-width: 600px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+
+    .value-card {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .value-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+    .value-icon {
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+
+    .team-card {
+      background: var(--white);
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+    .team-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+    .team-image {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+    .team-body {
+      padding: 1.75rem;
+    }
+    .team-role {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    .team-body h3 {
+      font-size: 1.35rem;
+      margin-bottom: 0.75rem;
+    }
+    .team-bio {
+      font-size: 0.95rem;
+      color: #64748B;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <nav class="nav container" aria-label="Main Navigation">
+      <a href="index.html" class="logo">Wander<span>Lux</span></a>
+      
+      <button class="nav-toggle" aria-label="Toggle navigation menu" id="navToggle">
+        <span class="hamburger"></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="calculator.html" class="nav-link">Trip Calculator</a></li>
+        <li><a href="appointment.html" class="nav-link">Appointments</a></li>
+        <li><a href="about.html" class="nav-link active">About Us</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="page-hero" aria-label="About Us Header">
+      <div class="container reveal">
+        <span class="badge">Our Heritage</span>
+        <h1>About WanderLux Agency</h1>
+        <p>Transforming complex global itineraries into effortless, highly personalized luxury journeys.</p>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="grid-2 align-center reveal">
+        <div class="about-text">
+          <h2>The WanderLux Story</h2>
+          <p class="lead">Founded on the belief that true luxury lies in seamless personalization and authentic local connection.</p>
+          <p>Established in Melbourne, WanderLux began as a boutique advisory service for discerning travelers frustrated by rigid, one-size-fits-all package tours. We recognized that extraordinary travel requires intimate knowledge, trusted local relationships, and absolute attention to detail.</p>
+          <p style="margin-top: 1rem;">Today, our network spans over 50 countries. We maintain direct partnerships with elite hoteliers, private aviation providers, and master local guides—allowing us to open doors that remain closed to the general public.</p>
+        </div>
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Travel consultants collaborating over a map and travel plans" style="width: 100%; border-radius: 12px; box-shadow: var(--shadow-lg);" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-light">
+      <div class="container reveal">
+        <div class="section-header">
+          <h2>Our Mission & Core Values</h2>
+          <p>Our operational philosophy is guided by four foundational pillars of customer service excellence.</p>
+        </div>
+
+        <div class="grid-4">
+          <!-- Value 1 -->
+          <article class="value-card">
+            <span class="value-icon">✦</span>
+            <h3>Bespoke Precision</h3>
+            <p style="color: #64748B; font-size: 0.95rem; margin-top: 0.5rem;">We craft every itinerary from a blank slate. Your schedule, dining preferences, and accommodation style dictate the journey.</p>
+          </article>
+
+          <!-- Value 2 -->
+          <article class="value-card">
+            <span class="value-icon">🛡️</span>
+            <h3>Uncompromising Safety</h3>
+            <p style="color: #64748B; font-size: 0.95rem; margin-top: 0.5rem;">We rigorously vet all transport operators, accommodations, and guides to ensure the highest international safety standards.</p>
+          </article>
+
+          <!-- Value 3 -->
+          <article class="value-card">
+            <span class="value-icon">🌐</span>
+            <h3>24/7 Global Concierge</h3>
+            <p style="color: #64748B; font-size: 0.95rem; margin-top: 0.5rem;">Time zones never stand between you and support. Our concierge team actively monitors your transit around the clock.</p>
+          </article>
+
+          <!-- Value 4 -->
+          <article class="value-card">
+            <span class="value-icon">🌿</span>
+            <h3>Sustainable Luxury</h3>
+            <p style="color: #64748B; font-size: 0.95rem; margin-top: 0.5rem;">We champion eco-conscious operators and ensure our tourism directly benefits local cultural preservation and communities.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-header reveal">
+        <h2>Meet Our Senior Consultants</h2>
+        <p>Our specialists have personally explored the regions they design, offering firsthand insights and trusted recommendations.</p>
+      </div>
+
+      <div class="grid-3 reveal">
+        <!-- Consultant 1 -->
+        <article class="team-card">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Elena Vance, Head of European Itineraries" class="team-image" />
+          <div class="team-body">
+            <span class="team-role">Senior European Specialist</span>
+            <h3>Elena Vance</h3>
+            <p class="team-bio">With over 15 years living between Florence and Paris, Elena specializes in private vineyard estates, historical art tours, and Mediterranean yacht charters.</p>
+          </div>
+        </article>
+
+        <article class="team-card">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" alt="Marcus Chen, Asia-Pacific Expedition Director" class="team-image" />
+          <div class="team-body">
+            <span class="team-role">Asia-Pacific Director</span>
+            <h3>Marcus Chen</h3>
+            <p class="team-bio">Marcus spent a decade coordinating luxury wilderness retreats across Japan, Bali, and New Zealand. He is our leading expert on private wellness sanctuaries.</p>
+          </div>
+        </article>
+
+        <article class="team-card">
+          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80" alt="Sarah Jenkins, Honeymoon & Island Specialist" class="team-image" />
+          <div class="team-body">
+            <span class="team-role">Honeymoon & Island Curator</span>
+            <h3>Sarah Jenkins</h3>
+            <p class="team-bio">Dedicated to once-in-a-lifetime celebrations, Sarah curates ultra-private escapes across the Maldives, French Polynesia, and the Greek Isles.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta-banner container reveal">
+      <div class="cta-content">
+        <h2>Ready to Speak With a Specialist?</h2>
+        <p>Connect with Elena, Marcus, or Sarah to begin designing an itinerary tailored perfectly to your schedule.</p>
+        <div class="hero-actions">
+          <a href="appointment.html" class="btn btn-primary">Request Private Consultation</a>
+          <a href="contact.html" class="btn btn-outline">General Inquiries</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo footer-logo">Wander<span>Lux</span></a>
+        <p>Your premier partner for bespoke domestic and international travel experiences.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="services.html">Services & Packages</a></li>
+          <li><a href="calculator.html">Trip Cost Calculator</a></li>
+          <li><a href="appointment.html">Book Appointment</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Agency Information</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Information</a></li>
+          <li><span>Level 14, 100 Collins St, Melbourne</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>&copy; 2026 WanderLux Travel Agency. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

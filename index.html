@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="WanderLux Travel Agency offers luxury holiday planning, guided tours, and custom travel packages to bespoke destinations worldwide." />
+  <title>Home | WanderLux Travel Agency</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <nav class="nav container" aria-label="Main Navigation">
+      <a href="index.html" class="logo">Wander<span>Lux</span></a>
+      
+      <button class="nav-toggle" aria-label="Toggle navigation menu" id="navToggle">
+        <span class="hamburger"></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="calculator.html" class="nav-link">Trip Calculator</a></li>
+        <li><a href="appointment.html" class="nav-link">Appointments</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-carousel" aria-label="Featured Destinations Banner">
+      
+      <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1920&q=80');">
+        <div class="slide-overlay"></div>
+        <div class="hero-content container">
+          <span class="badge">Featured Destination</span>
+          <h1>Mystic Kyoto, Japan</h1>
+          <p>Experience ancient temples, serene bamboo groves, and exclusive private tea ceremonies.</p>
+          <div class="hero-actions">
+            <a href="calculator.html" class="btn btn-primary">Estimate Trip Cost</a>
+            <a href="services.html" class="btn btn-secondary">Explore Services</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1920&q=80');">
+        <div class="slide-overlay"></div>
+        <div class="hero-content container">
+          <span class="badge">Featured Destination</span>
+          <h1>The Amalfi Coast, Italy</h1>
+          <p>Cliffside luxury villas, Mediterranean yacht charters, and world-class culinary tours.</p>
+          <div class="hero-actions">
+            <a href="calculator.html" class="btn btn-primary">Estimate Trip Cost</a>
+            <a href="services.html" class="btn btn-secondary">Explore Services</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1920&q=80');">
+        <div class="slide-overlay"></div>
+        <div class="hero-content container">
+          <span class="badge">Featured Destination</span>
+          <h1>Santorini Sunsets, Greece</h1>
+          <p>Iconic whitewashed architecture, private plunge pools, and tailored honeymoon escapes.</p>
+          <div class="hero-actions">
+            <a href="calculator.html" class="btn btn-primary">Estimate Trip Cost</a>
+            <a href="services.html" class="btn btn-secondary">Explore Services</a>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-control prev" id="prevSlide" aria-label="Previous Slide">&#10094;</button>
+      <button class="carousel-control next" id="nextSlide" aria-label="Next Slide">&#10095;</button>
+      
+      <div class="carousel-indicators" id="indicators">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
+      </div>
+    </section>
+
+    <section class="section container reveal">
+      <div class="intro-grid">
+        <div class="intro-text">
+          <h2>Redefining Luxury Travel Planning</h2>
+          <p class="lead">WanderLux is a boutique travel service provider offering bespoke holiday planning, guided tours, and tailored itineraries for discerning global travelers.</p>
+          <p>We eliminate the stress of travel logistics by leveraging intimate local knowledge and exclusive global partnerships. Whether you are seeking a quiet alpine retreat or an immersive cultural expedition across continents, our travel consultants handcraft every detail to align with your personal preferences and budget.</p>
+          <div class="intro-highlights">
+            <div class="stat-box">
+              <h3>50+</h3>
+              <span>Countries Covered</span>
+            </div>
+            <div class="stat-box">
+              <h3>99%</h3>
+              <span>Client Satisfaction</span>
+            </div>
+            <div class="stat-box">
+              <h3>24/7</h3>
+              <span>Concierge Support</span>
+            </div>
+          </div>
+        </div>
+        <div class="intro-image">
+          <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=80" alt="Travelers looking at a scenic mountain landscape" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-light">
+      <div class="container reveal">
+        <div class="section-header">
+          <h2>Popular Travel Packages</h2>
+          <p>Explore our most requested curated itineraries, designed to deliver unforgettable experiences.</p>
+        </div>
+
+        <div class="grid-3">
+          <!-- Package 1 -->
+          <article class="package-card">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=600&q=80" alt="Tropical resort overwater bungalows in Bali" />
+              <span class="package-tag">Best Seller</span>
+            </div>
+            <div class="card-body">
+              <div class="package-meta">
+                <span>📍 Bali, Indonesia</span>
+                <span>⏱️ 7 Days</span>
+              </div>
+              <h3>Balinese Sanctuary Retreat</h3>
+              <p>Includes five-star jungle villa accommodations in Ubud, private beachfront dinners, and guided temple excursions.</p>
+              <div class="card-footer">
+                <span class="price">From $2,450 / person</span>
+                <a href="appointment.html" class="link-arrow">Book Now &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="package-card">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80" alt="View of the Eiffel Tower at sunset in Paris" />
+            </div>
+            <div class="card-body">
+              <div class="package-meta">
+                <span>📍 Paris & Rome</span>
+                <span>⏱️ 10 Days</span>
+              </div>
+              <h3>European Grand Highlights</h3>
+              <p>First-class high-speed rail transit, skip-the-line private museum access, and Michelin-starred dining reservations.</p>
+              <div class="card-footer">
+                <span class="price">From $4,800 / person</span>
+                <a href="appointment.html" class="link-arrow">Book Now &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="package-card">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=600&q=80" alt="Northern lights in the snowy Norwegian fjords" />
+              <span class="package-tag">Seasonal</span>
+            </div>
+            <div class="card-body">
+              <div class="package-meta">
+                <span>📍 Tromsø, Norway</span>
+                <span>⏱️ 6 Days</span>
+              </div>
+              <h3>Arctic Aurora Expedition</h3>
+              <p>Stay in glass igloos, enjoy private fjord fjord cruises, and track the Northern Lights with expert Arctic guides.</p>
+              <div class="card-footer">
+                <span class="price">From $3,600 / person</span>
+                <a href="appointment.html" class="link-arrow">Book Now &rarr;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="center-btn">
+          <a href="services.html" class="btn btn-secondary">View All Services & Packages</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner container reveal">
+      <div class="cta-content">
+        <h2>Ready to Design Your Dream Holiday?</h2>
+        <p>Use our interactive calculator to estimate your trip investment or speak directly with our consultation team.</p>
+        <div class="hero-actions">
+          <a href="calculator.html" class="btn btn-primary">Try Cost Calculator</a>
+          <a href="appointment.html" class="btn btn-outline">Request Appointment</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo footer-logo">Wander<span>Lux</span></a>
+        <p>Your premier partner for bespoke domestic and international travel experiences.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="services.html">Services & Packages</a></li>
+          <li><a href="calculator.html">Trip Cost Calculator</a></li>
+          <li><a href="appointment.html">Book Appointment</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Agency Information</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Information</a></li>
+          <li><span>Level 14, 100 Collins St, Melbourne</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>&copy; 2026 WanderLux Travel Agency. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
